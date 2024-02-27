@@ -1,10 +1,10 @@
 #!/bin/sh
 
 # Update package lists and upgrade packages
-apt update && apt full-upgrade
+apt update && apt full-upgrade -y
 
 # Install net-tools and ubuntu-restricted-extras
-apt install net-tools ubuntu-restricted-extras
+apt install net-tools ubuntu-restricted-extras -y
 
 # Restart ALL services if prompted
 # If asked to reboot, do it before installing OpenVPN Access Server to run with the new kernel
@@ -20,4 +20,4 @@ echo "deb http://as-repository.openvpn.net/as/debian jammy main" > /etc/apt/sour
 apt update
 
 # Install OpenVPN Access Server
-apt install openvpn-as
+apt install openvpn-as -y
